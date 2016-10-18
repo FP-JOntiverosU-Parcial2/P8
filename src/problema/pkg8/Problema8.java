@@ -16,11 +16,12 @@ public class Problema8 {
      */
     public static void main(String[] args) {
         double a,b,o;
-        a=solicitarDato("adyacente");
+        a=solicitarDato("adyacente");// se piden los datos
         b=solicitarDato("opuesto");
         o=operacion(a,b);
+        mensajeSalida();
     }
-    public static double solicitarDato(String d){
+    public static double solicitarDato(String d){ 
         double dato;
         Scanner teclado= new Scanner(System.in);
         System.out.println("Introduce el cateto " + d);
@@ -29,9 +30,12 @@ public class Problema8 {
     }
     public static double operacion(double a, double b){
         double o;
-        o= Math.sqrt(Math.pow(a,2)+ Math.pow(b,2));
-        System.out.println("La hipotenusa es igual a: " + o );
+        o= Math.sqrt(Math.pow(a,2)+ Math.pow(b,2)); // se pide la raiz del resultado de la operacion
+        System.out.println("La hipotenusa es igual a: " + o ); //se muestra el resultado
         return o;
     }
-    
+    public static void mensajeSalida(){
+        System.out.println("Gracias por usar el programa"); //Se agradece por usar el programa
+       System.exit(0);
+    }
 }
